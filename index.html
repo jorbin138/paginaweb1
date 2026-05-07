@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Turnos - CUN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Sistema de Gestión de Turnos</h1>
+        <p><strong>Autores:</strong> Jordan Niño</p>
+    </header>
+
+    <!-- FORMULARIO -->
+    <section class="formulario-seccion">
+
+        <div id="mensajeAlerta" class="alert"></div>
+
+        <form id="turnoForm">
+
+            <input type="text" id="nombre" placeholder="Nombre del cliente" required>
+
+            <input type="tel" id="telefono" placeholder="Número de teléfono" required>
+
+            <div class="row">
+                <input type="date" id="fecha" required>
+                <input type="time" id="hora" required>
+            </div>
+
+            <select id="servicio" required>
+                <option value="">Seleccione tipo de servicio</option>
+                <option value="Barbería">Barbería</option>
+                <option value="Consultorio">Consultorio</option>
+                <option value="Taller">Taller</option>
+                <option value="Belleza">Centro de Belleza</option>
+            </select>
+
+            <textarea id="observaciones" placeholder="Observaciones opcionales"></textarea>
+
+            <button type="submit">Agendar Turno</button>
+
+        </form>
+    </section>
+
+    <!-- TABLA -->
+    <section class="tabla-seccion">
+
+        <h2>Turnos Programados</h2>
+
+        <div class="table-wrapper">
+
+            <table id="tablaTurnos">
+
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Teléfono</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Servicio</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaTurnos">
+                    <!-- Aquí se agregan los turnos -->
+                </tbody>
+
+            </table>
+
+        </div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
